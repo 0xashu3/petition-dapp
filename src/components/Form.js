@@ -22,7 +22,7 @@ const Form = (props) => {
     from: props.transaction.from,
     to: props.transaction.to,
     url: `https://rinkeby.etherscan.io/tx/${props.transaction.hash}`,
-    campaignurl: `http://localhost:3000/${props.campaignAddress}`,
+    campaignurl: `https://petition-dapp.vercel.app/${props.campaignAddress}`,
   };
 
   const renderAlert = () => {
