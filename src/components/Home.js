@@ -69,28 +69,13 @@ const Home = (props) => {
       props.connectWallet();
       returnAllPetition();
     }
-  }, []);
-
-  const renderButton = () => {
-    if (walletConnected) {
-      if (loading) {
-        return <button>Loading...</button>;
-      } else {
-        return (
-          <button onClick={createNewPetition}>Create Quick Petition</button>
-        );
-      }
-    } else {
-      return <button onClick={props.connectWallet}>Connect your wallet</button>;
-    }
-  };
+  }, [walletConnected]);
 
   console.log(walletConnected);
 
   return (
     <>
-      <div className="container">
-        {renderButton()}
+      <div>
         <Form
           createNewPetition={createNewPetition}
           walletConnected={walletConnected}

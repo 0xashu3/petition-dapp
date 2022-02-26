@@ -115,12 +115,32 @@ const Petition = (props) => {
       if (hasSigned) {
         return <div>Thanks for signing the Petition!</div>;
       } else if (loading) {
-        return <button>Loading...</button>;
+        return (
+          <button type="button" className="btn btn-primary btn-lg">
+            Loading...
+          </button>
+        );
       } else {
-        return <button onClick={signPetition}>Sign the Petition</button>;
+        return (
+          <button
+            type="button"
+            className="btn btn-primary btn-lg"
+            onClick={signPetition}
+          >
+            Sign the Petition
+          </button>
+        );
       }
     } else {
-      return <button onClick={props.connectWallet}>Connect your wallet</button>;
+      return (
+        <button
+          type="button"
+          className="btn btn-primary btn-lg"
+          onClick={props.connectWallet}
+        >
+          Connect your wallet
+        </button>
+      );
     }
   };
 
@@ -130,14 +150,15 @@ const Petition = (props) => {
     if (walletConnected) {
       return (
         <div>
-          <div className="container">
+          <div className="container text-center w-50">
             <p>
-              Petiton: {CAMPAIGN_ADDRESS} Supporters: {n}
+              Petiton Smart Contract: {CAMPAIGN_ADDRESS}
               {hasSigned}
             </p>
 
             <h1>{title}</h1>
-            <h3>{description}</h3>
+            <p>{description}</p>
+            <p class="fw-bold">Supporters: {n}</p>
             {renderButton()}
           </div>
         </div>
@@ -145,14 +166,21 @@ const Petition = (props) => {
     } else {
       return (
         <>
-          Please connect your metamask wallet and switch to Rinkeby Network to
-          sign this petition {renderButton()}
+          <div className="container text-center">
+            Please connect your metamask wallet and switch to Rinkeby Network to
+            sign this petition
+            <div className="text-center p-3"> {renderButton()}</div>
+          </div>
         </>
       );
     }
   };
 
-  return <>{content()}</>;
+  return (
+    <>
+      <div className=" my-3">{content()}</div>
+    </>
+  );
 };
 
 export default Petition;
