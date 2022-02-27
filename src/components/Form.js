@@ -75,7 +75,9 @@ const Form = (props) => {
             </a>
           </div>
           <div className="container my-3">Creator: {transaction.from}</div>
-          <div className="container my-3">Creator: {props.campaignAddress}</div>
+          <div className="container my-3">
+            Your Petition Contract Address: {props.campaignAddress}
+          </div>
         </div>
       );
     }

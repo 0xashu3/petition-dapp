@@ -18,9 +18,9 @@ const LandingPage = () => {
           </h1>
           <div className="container w-50">
             <p className="text-center p-4  lead">
-              Unipetit allows you create decentralised petitions. Every petition
-              has a unique smart contract address when supporters can sign the
-              petition. It is designed to be censor-resistant and 100%
+              Unipetition allows you create decentralised petitions. Every
+              petition has a unique smart contract address when supporters can
+              sign the petition. It is designed to be censor-resistant and 100%
               transparent.
             </p>
           </div>

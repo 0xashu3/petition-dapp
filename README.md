@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+Video Link: https://www.youtube.com/watch?v=FsuVyJOJa28
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Demo Link: https://unipetition.vercel.app/ (Use Metamask wallet to interact with our app)
 
-## Available Scripts
+idea: decentralized petition app powered by blockchain
 
-In the project directory, you can run:
+Tech Stack Used:
+React.js, Solidity, Hardhat, metamask, Ethers.js
 
-### `npm start`
+#Team Details
+team code:29acac8bd9
+team name: errors
+if fresher: True
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#description of idea
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+problem:
+Online Petition Platforms are important to empowers common people to bring social or political cause in public and make a change. But all these online platforms (eg. change.org) are centralised and are controlled by centralised companies.
 
-### `npm test`
+Most petitions are against governments and big campanies which can force the platform to pull down petition if they don't like. For eg, recently the Canada govt pulled down gofundme page where people were protesting online.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The other problem is that the platforms can even manipulate the numbers of signatures. There is no way to validate transactions. The centralized petition signing system is not transparent. Also, these platforms collect our personal data like email which some of us may not want to share.
 
-### `npm run build`
+Solution:
+Unipetition is the solution which allows users to create decentralized petitions. Each petition is has a unique smart contract address on the blockchain and it stores title and description of campaign. The supporters of petition can sign petition by interacting with the smart contract through their wallets. Each signature is actually a transaction on the smart contract and blockchain.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Since all the data like campaign title, description and signatures are stored on the blockchain, no one can remove them because all the transactions are immutable.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+If someone doesn't want to run petition on our website, they can fetch the petition title, description and no of signatures from the smart contract and run it on their own website. So anyone can fetch details from the contract create a frontend based on our contract.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+All the signatures are public and can be viewed on etherscan. If frontend creator tried to manipulate with no. of signatures, they can be caught easily.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Censors can actually pull down our entire frontend website. But they cannot remove smart contracts petitions and signatures. In that case, some other developer can create frontend by fetching data from the same smart contract. Thus, unipetition is censor-resistant.
