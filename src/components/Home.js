@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Web3Modal from "web3modal";
 import { providers, Contract } from "ethers";
 import Form from "./Form";
 import { DEPETITION_CONTRACT_ADDRESS, abi } from "./constants";
-import List from "./List";
 
 const Home = (props) => {
   const walletConnected = props.walletConnected;

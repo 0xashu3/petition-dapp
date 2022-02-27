@@ -113,11 +113,18 @@ const Petition = (props) => {
   const renderButton = () => {
     if (walletConnected) {
       if (hasSigned) {
-        return <div>Thanks for signing the Petition!</div>;
+        return (
+          <>
+            <div>Thanks for signing the Petition!</div>
+            <div className="p-3">
+              Share petition link with your friends: {contracturl}
+            </div>
+          </>
+        );
       } else if (loading) {
         return (
           <button type="button" className="btn btn-primary btn-lg">
-            Loading...
+            Waiting For Confirmation...
           </button>
         );
       } else {
@@ -146,19 +153,28 @@ const Petition = (props) => {
 
   console.log(walletConnected);
 
+  const etherscancontracturl = `https://rinkeby.etherscan.io/address/${CAMPAIGN_ADDRESS}`;
+  const contracturl = `http://localhost:3000/${CAMPAIGN_ADDRESS}`;
+
   const content = () => {
     if (walletConnected) {
       return (
         <div>
           <div className="container text-center w-50">
             <p>
-              Petiton Smart Contract: {CAMPAIGN_ADDRESS}
-              {hasSigned}
+              Petiton Smart Contract:{" "}
+              <a
+                href={etherscancontracturl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {CAMPAIGN_ADDRESS}
+              </a>{" "}
             </p>
 
             <h1>{title}</h1>
-            <p>{description}</p>
-            <p class="fw-bold">Supporters: {n}</p>
+            <p className="p-3">{description}</p>
+            <p className="fw-bold">Supporters: {n}</p>
             {renderButton()}
           </div>
         </div>

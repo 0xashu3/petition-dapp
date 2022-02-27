@@ -1,13 +1,13 @@
 import "./App.css";
 import React, { useRef, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { providers, Contract } from "ethers";
-import { Home, List, Petition } from "./components/Index";
-import Form from "./components/Form";
+import { providers } from "ethers";
+import { Home, Petition, LandingPage } from "./components/Index";
 
 function App() {
   const [walletConnected, setWalletConnected] = useState(false);
   const web3ModalRef = useRef();
+  const host = "http://localhost:3000";
 
   const getProviderOrSigner = async (needSigner = false) => {
     const provider = await web3ModalRef.current.connect();
@@ -41,7 +41,7 @@ function App() {
       <Routes>
         <Route
           exact
-          path="/"
+          path="/app"
           element={
             <Home
               walletConnected={walletConnected}
@@ -51,8 +51,7 @@ function App() {
             />
           }
         />
-        <Route exact path="/list" element={<List />} />
-        <Route exact path="/form" element={<Form />} />
+        <Route exact path="/" element={<LandingPage host={host} />} />
         <Route
           exact
           path="/:address"

@@ -22,7 +22,8 @@ const Form = (props) => {
     from: props.transaction.from,
     to: props.transaction.to,
     url: `https://rinkeby.etherscan.io/tx/${props.transaction.hash}`,
-    campaignurl: `https://petition-dapp.vercel.app/${props.campaignAddress}`,
+    campaignurl: `http://localhost:3000/${props.campaignAddress}`,
+    campaignurlexplorer: `https://rinkeby.etherscan.io/address/${props.campaignAddress}`,
   };
 
   const renderAlert = () => {
@@ -55,12 +56,26 @@ const Form = (props) => {
       return (
         <div className="container my-3">
           <div className="container my-3">
-            <a href={transaction.campaignurl}>Campaign Link</a>
+            <a target="_blank" rel="noreferrer" href={transaction.campaignurl}>
+              Campaign Link
+            </a>
           </div>
           <div className="container my-3">
-            <a href={transaction.url}>View Transaction On Etherscan</a>
+            <a target="_blank" rel="noreferrer" href={transaction.url}>
+              View Transaction On Etherscan
+            </a>
+          </div>
+          <div className="container my-3">
+            <a
+              href={transaction.campaignurlexplorer}
+              rel="noreferrer"
+              target="_blank"
+            >
+              View Petition Contract On Etherscan
+            </a>
           </div>
           <div className="container my-3">Creator: {transaction.from}</div>
+          <div className="container my-3">Creator: {props.campaignAddress}</div>
         </div>
       );
     }
