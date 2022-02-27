@@ -38,6 +38,8 @@ const LandingPage = () => {
                 href="https://rinkeby.etherscan.io/address/0xce6dca43bcb81259e7d53316aa09dee0039d80b8"
                 className="btn btn-primary btn-lg"
                 role="button"
+                rel="noreferrer"
+                target="_blank"
               >
                 View Contract on Etherscan
               </a>

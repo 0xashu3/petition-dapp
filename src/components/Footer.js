@@ -7,7 +7,8 @@ const Footer = () => {
         {" "}
         <p className="text-center">
           {" "}
-          Made with ❤ by <a href="https://github.com/0xashu3">Ashutosh</a>{" "}
+          Made with ❤ by{" "}
+          <a href="https://github.com/0xashu3/unipetition">Ashutosh</a>{" "}
         </p>
       </div>
     </div>

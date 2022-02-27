@@ -154,7 +154,7 @@ const Petition = (props) => {
   console.log(walletConnected);
 
   const etherscancontracturl = `https://rinkeby.etherscan.io/address/${CAMPAIGN_ADDRESS}`;
-  const contracturl = `http://localhost:3000/${CAMPAIGN_ADDRESS}`;
+  const contracturl = `https://unipetition.vercel.app/${CAMPAIGN_ADDRESS}`;
 
   const content = () => {
     if (walletConnected) {
